@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Kings Vault</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f3d6a0;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #2b1900;
+      }
+
+      .searchbar {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 10px 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .searchbar:active {
+        padding: 10px 100px;
+      }
+
+      .search-input:focus {
+        width: 280px;
+      }
+
+      .search-input {
+        border: none;
+        outline: none;
+        padding: 8px 12px;
+        font-size: 16px;
+        background: transparent;
+        width: 200px;
+        color: #333;
+        transition: width 0.3s ease;
+      }
+
+      .search-button {
+        background-color: rgb(241, 241, 241);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        color: #333;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s ease;
+      }
+
+      .search-button:hover {
+        color: #888;
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .search-input {
+          width: 150px;
+        }
+      }
+
+      .gamebuttonthing {
+        color: #2b1900;
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 10px 50px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gamebuttonthing:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .gamebuttonthing svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+      }
+
+      .gamebuttonthing:hover svg {
+        transform: scale(1.15);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🐔 Chicken Kings Vault 🐔</h1>
+    <div class="searchbar">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <button class="search-button" id="search-btn">
+        <i data-lucide="search"></i>
+      </button>
+    </div>
+    <div class="gamebuttonthing">
+      <i data-lucide="gamepad"></i>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
