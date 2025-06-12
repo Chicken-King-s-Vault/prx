@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chicken Kings Vault</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       * {
         box-sizing: border-box;
@@ -15,7 +17,7 @@
 
       body {
         background-color: #f3d6a0;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +33,7 @@
         color: #2b1900;
       }
 
-      .searchbar {
+      .searchbar-container {
         display: flex;
         align-items: center;
         background: #fff;
@@ -40,14 +42,38 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         gap: 10px;
         transition: box-shadow 0.3s ease;
+        margin-bottom: 20px;
       }
 
-      .searchbar:active {
-        padding: 10px 100px;
+      .searchbar {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        gap: 10px;
       }
 
-      .search-input:focus {
-        width: 280px;
+      .icon-button {
+        background: #fff;
+        border: none;
+        padding: 8px;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .icon-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon-button svg {
+        width: 24px;
+        height: 24px;
+        color: #2b1900;
       }
 
       .search-input {
@@ -56,9 +82,11 @@
         padding: 8px 12px;
         font-size: 16px;
         background: transparent;
-        width: 200px;
+        flex-grow: 1;
         color: #333;
-        transition: width 0.3s ease;
+        width: 200px;
+        max-width: 100%;
+        transition: width 0.6s ease, height 0.6s ease;
       }
 
       .search-button {
@@ -74,8 +102,19 @@
         transition: color 0.3s ease;
       }
 
+      .search-input:focus {
+        width: 300px;
+      }
+
       .search-button:hover {
         color: #888;
+      }
+
+      .random-text {
+        font-size: 15px;
+        color: #2b1900;
+        text-align: center;
+        margin-top: 10px;
       }
 
       @media (max-width: 500px) {
@@ -87,15 +126,67 @@
           width: 150px;
         }
       }
+
+      .icon-button-hs {
+        background: #fff;
+        border: none;
+        padding: 8px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .icon-button-hs:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon-button-hs svg {
+        width: 24px;
+        height: 24px;
+        color: #2b1900;
+      }
     </style>
   </head>
   <body>
     <h1>🐔 Chicken Kings Vault 🐔</h1>
-    <div class="searchbar">
-      <input type="text" placeholder="Search..." class="search-input" />
-      <button class="search-button" id="search-btn">
-        <i data-lucide="search"></i>
+    <div class="searchbar-container">
+      <button class="icon-button" onclick="window.location.href='gamepage.html'">
+        <i data-lucide="gamepad"></i>
+      </button>
+      <div class="searchbar">
+        <input type="text" placeholder="Search..." class="search-input" />
+        <button class="search-button" id="search-btn">
+          <i data-lucide="search"></i>
+        </button>
+      </div>
+      <button class="icon-button" onclick="window.location.href='appspage.html'">
+        <i data-lucide="layout-grid"></i>
       </button>
     </div>
+    <div class="random-text" id="random-text"></div>
     <script>
-... (4 lines left)
+      document.addEventListener("DOMContentLoaded", function() {
+        const texts = ["I like kids", "CKV rules!", "Credit to PlayerVPN.", "This rug really tied the room together.", "That's what she said."];
+        const randomTextElement = document.getElementById("random-text");
+
+        function displayRandomText() {
+          const randomIndex = Math.floor(Math.random() * texts.length);
+          randomTextElement.textContent = texts[randomIndex];
+        }
+        displayRandomText();
+        lucide.createIcons();
+      });
+    </script>
+    <div class="random-text" id="random-text"></div>
+    <div class="hndshakebtn">
+      <button class="icon-button-hs" onclick="window.location.href='partners.html'">
+        <i data-lucide="handshake"></i>
+      </button>
+    </div>
+  </body>
+</html>
