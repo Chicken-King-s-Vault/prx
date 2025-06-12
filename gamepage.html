@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CKV - Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3d6a0;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .titletext h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #2b1900;
+      }
+
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1300px;
+      width: 100%;
+    }
+
+    .game-card {
+      position: relative;
+      width: 240px;
+      height: 320px;
+      background: linear-gradient(145deg, #fff0c1, #f7c778);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #2b1900;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom-left-radius 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-bottom-left-radius: 5px;
+    }
+
+    .game-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 60%);
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .game-card h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .game-card {
+        width: 90%;
+        height: auto;
+      }
+
+      .game-card img {
+        height: 200px;
+      }
+
+      .game-card h2 {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="titletext">
+    <h1>🐔 Chicken Kings Vault 🐔</h1>
+  </div>
+
+  <div class="game-container">
+    <a href="games/slope.html" class="game-card">
+      <img src="games/images/slope.png" alt="slope">
+      <h2>Slope</h2>
+    </a>
+    <a href="games/bitlife/index.html" class="game-card">
+      <img src="games/images/bitlife.jpg" alt="bitlife">
+      <h2>Bitlife</h2>
+    </a>
+    <a href="games/driftboss.html" class="game-card">
+      <img src="games/images/driftboss.png" alt="DriftBoss">
+      <h2>Drift Boss</h2>
+    </a>
+  </div>
+</body>
+</html>
