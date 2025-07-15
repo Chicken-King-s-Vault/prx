@@ -6,11 +6,11 @@
     <title>Settings - Chicken Kings Vault</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-      <nav class="top-nav">
+    <nav class="top-nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 🐔 Chicken Kings Vault
@@ -20,20 +20,19 @@
                     <i data-lucide="home"></i>
                     Home
                 </a>
-               
-               <a href="Games.html" class="nav-link">
-         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="6" x2="10" y1="12" y2="12"/>
-        <line x1="8" x2="8" y1="10" y2="14"/>
-        <line x1="15" x2="15.01" y1="13" y2="13"/>
-        <line x1="18" x2="18.01" y1="11" y2="11"/>
-        <rect width="20" height="12" x="2" y="6" rx="2"/>
-    </svg>
-    Games
-        </a>
-               <a href="settings.html" class="nav-link">
-                <i data-lucide="settings"></i>
-                Settings
+                <a href="Games.html" class="nav-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="6" x2="10" y1="12" y2="12"/>
+                        <line x1="8" x2="8" y1="10" y2="14"/>
+                        <line x1="15" x2="15.01" y1="13" y2="13"/>
+                        <line x1="18" x2="18.01" y1="11" y2="11"/>
+                        <rect width="20" height="12" x="2" y="6" rx="2"/>
+                    </svg>
+                    Games
+                </a>
+                <a href="settings.html" class="nav-link active">
+                    <i data-lucide="settings"></i>
+                    Settings
                 </a>
                 <a href="partners.html" class="nav-link">
                     <i data-lucide="handshake"></i>
@@ -46,7 +45,158 @@
         </div>
     </nav>
 
-   <script src="js/nav.js"></script> 
-   
+    <main class="settings-container">
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <p>Customize your Chicken Kings Vault experience</p>
+        </div>
+
+        <div class="settings-content">
+            <div class="settings-section">
+                <div class="section-header">
+                    <i data-lucide="palette"></i>
+                    <h2>Theme Settings</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="theme" value="light" checked>
+                            <div class="theme-option light-theme">
+                                <div class="theme-preview">
+                                    <div class="theme-circle light-circle"></div>
+                                    <span>Light</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="theme" value="dark">
+                            <div class="theme-option dark-theme">
+                                <div class="theme-preview">
+                                    <div class="theme-circle dark-circle"></div>
+                                    <span>Dark</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="theme" value="blue">
+                            <div class="theme-option blue-theme">
+                                <div class="theme-preview">
+                                    <div class="theme-circle blue-circle"></div>
+                                    <span>Ocean</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="theme" value="purple">
+                            <div class="theme-option purple-theme">
+                                <div class="theme-preview">
+                                    <div class="theme-circle purple-circle"></div>
+                                    <span>Purple</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="settings-section">
+                <div class="section-header">
+                    <i data-lucide="eye-off"></i>
+                    <h2>Tab Cloaking</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="none" checked>
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <div class="cloak-icon">🐔</div>
+                                    <span>No Cloak</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="google">
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <img src="https://www.google.com/favicon.ico" alt="Google" class="cloak-favicon">
+                                    <span>Google</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="classroom">
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Classroom" class="cloak-favicon">
+                                    <span>Classroom</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="docs">
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" alt="Google Docs" class="cloak-favicon">
+                                    <span>Docs</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="drive">
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive" class="cloak-favicon">
+                                    <span>Drive</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="radio" name="cloak" value="khan">
+                            <div class="cloak-option">
+                                <div class="cloak-preview">
+                                    <img src="https://cdn.kastatic.org/images/favicon.ico" alt="Khan Academy" class="cloak-favicon">
+                                    <span>Khan</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-footer">
+                <button class="save-btn">
+                    <i data-lucide="save"></i>
+                    Save Settings
+                </button>
+                <button class="reset-btn">
+                    <i data-lucide="refresh-ccw"></i>
+                    Reset to Default
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/nav.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
