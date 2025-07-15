@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Partners - Chicken Kings Vault</title>
+    <title>Games - Chicken Kings Vault</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <title>CKV | Partners</title>
-    
-  </head>
-  <body>
-       <nav class="top-nav">
+</head>
+<body>
+     <nav class="top-nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 🐔 Chicken Kings Vault
@@ -48,25 +46,28 @@
         </div>
     </nav>
 
- 
-<script src="js/nav.js"></script>
-    
-    
-    <div class="partner-container">
-      <a href="https://vplaza.org/" class="partner-card">
-        <img src="partners/images/vplazav1.png" alt="vplaza" />
-        <h2>Vplaza</h2>
-      </a>
-       <a href="https://flicker.chat/" class="partner-card">
-        <img src="images/flicker2.png" alt="flicker" />
-        <h2>Flicker Ai</h2>
-      </a>
 
-      <a href="https://loungef2x.global.ssl.fastly.net/" class="partner-card">
-        <img src="partners/images/lf2.png" alt="lf2x" />
-        <h2>loungef2x</h2>
-      </a>
-     
-    </div>
-  </body>
+    <main class="main-content">
+        <div class="hero-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="gameSearch" placeholder="Search games..." />
+                </div>
+            </div>
+            
+            <div class="games-grid">
+       
+            </div>
+        </div>
+    </main>
+
+    <script src="js/nav.js"></script>
+    <script src="js/games.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
 </html>

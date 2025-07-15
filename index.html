@@ -1,192 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chicken Kings Vault</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                🐔 Chicken Kings Vault
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">
+                    <i data-lucide="home"></i>
+                    Home
+                </a>
+               
+               <a href="Games.html" class="nav-link">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" x2="10" y1="12" y2="12"/>
+        <line x1="8" x2="8" y1="10" y2="14"/>
+        <line x1="15" x2="15.01" y1="13" y2="13"/>
+        <line x1="18" x2="18.01" y1="11" y2="11"/>
+        <rect width="20" height="12" x="2" y="6" rx="2"/>
+    </svg>
+    Games
+        </a>
+               <a href="settings.html" class="nav-link">
+                <i data-lucide="settings"></i>
+                Settings
+                </a>
+                <a href="partners.html" class="nav-link">
+                    <i data-lucide="handshake"></i>
+                    Partners
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
 
-      body {
-        background-color: #f3d6a0;
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        padding: 40px 20px;
-      }
 
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin-bottom: 40px;
-        text-align: center;
-        color: #2b1900;
-      }
+    <div class="main-content">
+        <h1>🐔 Chicken Kings Vault 🐔</h1>
+        
+        <div class="searchbar-container">
+            <div class="searchbar">
+                <input type="text" placeholder="Search The Web Freely..." class="search-input" />
+                <button class="search-button" id="search-btn">
+                    <i data-lucide="search"></i>
+                </button>
+            </div>
+            
+        </div>
 
-      .searchbar-container {
-        display: flex;
-        align-items: center;
-        background: #fff;
-        padding: 10px 15px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        gap: 10px;
-        transition: box-shadow 0.3s ease;
-        margin-bottom: 20px;
-      }
+        <div class="random-text" id="random-text"></div>
 
-      .searchbar {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        gap: 10px;
-      }
-
-      .icon-button {
-        background: #fff;
-        border: none;
-        padding: 8px;
-        border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .icon-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .icon-button svg {
-        width: 24px;
-        height: 24px;
-        color: #2b1900;
-      }
-
-      .search-input {
-        border: none;
-        outline: none;
-        padding: 8px 12px;
-        font-size: 16px;
-        background: transparent;
-        flex-grow: 1;
-        color: #333;
-        width: 200px;
-        max-width: 100%;
-        transition: width 0.6s ease, height 0.6s ease;
-      }
-
-      .search-button {
-        background-color: rgb(241, 241, 241);
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        color: #333;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: color 0.3s ease;
-      }
-
-      .search-input:focus {
-        width: 300px;
-      }
-
-      .search-button:hover {
-        color: #888;
-      }
-
-      .random-text {
-        font-size: 15px;
-        color: #2b1900;
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      @media (max-width: 500px) {
-        h1 {
-          font-size: 1.8rem;
-        }
-
-        .search-input {
-          width: 150px;
-        }
-      }
-
-      .icon-button-hs {
-        background: #fff;
-        border: none;
-        padding: 8px 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .icon-button-hs:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .icon-button-hs svg {
-        width: 24px;
-        height: 24px;
-        color: #2b1900;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>🐔 Chicken Kings Vault 🐔</h1>
-    <div class="searchbar-container">
-      <button class="icon-button" onclick="window.location.href='gamepage.html'">
-        <i data-lucide="gamepad"></i>
-      </button>
-      <div class="searchbar">
-        <input type="text" placeholder="Search..." class="search-input" />
-        <button class="search-button" id="search-btn">
-          <i data-lucide="search"></i>
-        </button>
-      </div>
-      <button class="icon-button" onclick="window.location.href='appspage.html'">
-        <i data-lucide="layout-grid"></i>
-      </button>
+   
+  
+<div class="quick-actions">
+    <div class="quick-action-card" onclick="window.location.href='home.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22"/>
+        </svg>
+        <h3>Home</h3>
     </div>
-    <div class="random-text" id="random-text"></div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const texts = ["I like kids", "CKV rules!", "Credit to PlayerVPN.", "This rug really tied the room together.", "That's what she said."];
-        const randomTextElement = document.getElementById("random-text");
-
-        function displayRandomText() {
-          const randomIndex = Math.floor(Math.random() * texts.length);
-          randomTextElement.textContent = texts[randomIndex];
-        }
-        displayRandomText();
-        lucide.createIcons();
-      });
-    </script>
-    <div class="random-text" id="random-text"></div>
-    <div class="hndshakebtn">
-      <button class="icon-button-hs" onclick="window.location.href='partners.html'">
-        <i data-lucide="handshake"></i>
-      </button>
+    <div class="quick-action-card" onclick="window.location.href='games.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" x2="10" y1="12" y2="12"/>
+            <line x1="8" x2="8" y1="10" y2="14"/>
+            <line x1="15" x2="15.01" y1="13" y2="13"/>
+            <line x1="18" x2="18.01" y1="11" y2="11"/>
+            <rect width="20" height="12" x="2" y="6" rx="2"/>
+        </svg>
+        <h3>Games</h3>
     </div>
-  </body>
+    <div class="quick-action-card" onclick="window.location.href='settings.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <h3>Settings</h3>
+    </div>
+   <div class="quick-action-card" onclick="window.location.href='partners.html'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+        <path d="m21 3 1 11h-2"/>
+        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+        <path d="M3 4h8"/>
+    </svg>
+    <h3>Partners</h3>
+</div>
+   
+<script src="js/nav.js"></script>
+
+
+</body>
 </html>
