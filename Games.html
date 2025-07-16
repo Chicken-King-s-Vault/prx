@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games - Chicken Kings Vault</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+     <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                🐔 Chicken Kings Vault
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">
+                    <i data-lucide="home"></i>
+                    Home
+                </a>
+               
+               <a href="Games.html" class="nav-link">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" x2="10" y1="12" y2="12"/>
+        <line x1="8" x2="8" y1="10" y2="14"/>
+        <line x1="15" x2="15.01" y1="13" y2="13"/>
+        <line x1="18" x2="18.01" y1="11" y2="11"/>
+        <rect width="20" height="12" x="2" y="6" rx="2"/>
+    </svg>
+    Games
+        </a>
+               <a href="settings.html" class="nav-link">
+                <i data-lucide="settings"></i>
+                Settings
+                </a>
+                <a href="partners.html" class="nav-link">
+                    <i data-lucide="handshake"></i>
+                    Partners
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+        <div class="hero-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="gameSearch" placeholder="Search games..." />
+                </div>
+            </div>
+            
+            <div class="games-grid">
+       
+            </div>
+        </div>
+    </main>
+
+    <script src="js/nav.js"></script>
+    <script src="js/games.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
