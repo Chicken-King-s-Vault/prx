@@ -1,0 +1,52 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "title": "1",
+      "image": "images/1.png",
+      "link": "games/1/1.html"
+    },
+    {
+      "id": "10 Bullets",
+      "title": "10 Bullets",
+      "image": "images/10.png",
+      "link": "games/10bullets/10.html"
+    },
+    {
+      "id": "10minutestildawn",
+      "title": "10minutestilldawn",
+      "image": "images/minutes.png",
+      "link": "games/10minutestilldawn/minutes.html"
+    },
+    {
+      "id": "Nullkevin",
+      "title": "NullKevin",
+      "image": "images/103.png",
+      "link": "games/103/cl.html"
+    },
+    {
+      "id": "12 Mini Battles",
+      "title": "12 Mini Battles",
+      "image": "images/mini.avif",
+      "link": "games/12mini/mini.html"
+    },
+    {
+      "id": "1on1 Soccer",
+      "title": "1on1 Soccer",
+      "image": "images/1on1.webp",
+      "link": "games/1on1soccer/101.html"
+    },
+    {
+      "id": "1on1 Tennis",
+      "title": "1o1 Tennis",
+      "image": "images/1on1tennis.jpg",
+      "link": "games/1on1tennis/1on1tennis.html"
+    },
+    {
+      "id": "1v1 lol",
+      "title": "1v1 lol",
+      "image": "images/lol.avif",
+      "link": "games/1v1lol/lol.html"
+    }
+  ]
+}
